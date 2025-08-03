@@ -8,6 +8,7 @@ initializeDatabase();
 dotenv.config();
 app.use(cors());
 app.use(express.json());
-app.listen(3000,function(req,res){
+const PORT = process.env.PORT || 3000;
+app.listen(PORT,function(req,res){
     console.log("Listening")
 })
